@@ -16,7 +16,7 @@
 package net.thecallsign.common;
 
 /**
- * A LILO (Last In Last Out) data structure, used for recursion or storing 
+ * A FILO (First In Last Out) data structure, used for recursion or storing 
  * a set of elements where order is vital.
  * 
  * @author St John Giddy
