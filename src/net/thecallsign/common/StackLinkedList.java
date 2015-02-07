@@ -15,6 +15,8 @@
  */
 package net.thecallsign.common;
 
+import java.util.NoSuchElementException;
+
 /**
  * LinkedList based Stack data structure
  * @author St John Giddy
@@ -40,7 +42,7 @@ public class StackLinkedList<T> implements Stack<T> {
     } 
 
     @Override
-    public T pop()
+    public T pop() throws NoSuchElementException
     {
         if (first == null) throw new java.util.NoSuchElementException();
         T ele = first.ele;

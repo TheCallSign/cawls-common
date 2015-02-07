@@ -15,10 +15,12 @@
  */
 package net.thecallsign.common;
 
+import java.util.NoSuchElementException;
+
 /**
  * Array based Stack data structure
  * @author St John Giddy
- * @param <T>
+ * @param <T> Type
  */
 public class StackArray<T> implements Stack<T> {
 
@@ -47,11 +49,10 @@ public class StackArray<T> implements Stack<T> {
     } 
 
     /**
-     * @exception  java.util.NoSuchElementException() If the stack size is 0
-     * @return 
+     * @return Element
      */
     @Override
-    public T pop()
+    public T pop() throws NoSuchElementException
     {
         if (total == 0) throw new java.util.NoSuchElementException();
         T ele = arr[--total];

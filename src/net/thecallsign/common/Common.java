@@ -20,7 +20,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * Common functions I use.
+ * Common methods I use.
  * www.thecallsign.net
  * @author St John 'Cawl' Giddy
  * @version 0.2.1

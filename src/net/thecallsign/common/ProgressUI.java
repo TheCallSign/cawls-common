@@ -70,7 +70,7 @@ public class ProgressUI extends javax.swing.JFrame {
     /**
      * Set the maximum value of the progress bar.
      * @param max Value
-     * @default 100
+     * Default 100
      */
     public void setProgressBarMaxValue(int max){
         this.progressBar.setMaximum(max);
@@ -78,7 +78,7 @@ public class ProgressUI extends javax.swing.JFrame {
     /**
      * Set the minimum value of the progress bar.
      * @param min Value
-     * @default 0
+     * Default 0
      */
     public void setProgressBarMinValue(int min){
         this.progressBar.setMaximum(min);
