@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package net.thecallsign;
+package net.thecallsign.common;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -21,9 +21,10 @@ import java.util.List;
 
 /**
  * Common functions I use.
+ * www.thecallsign.net
  * @author St John 'Cawl' Giddy
  * @version 0.2.1
- * @see www.thecallsign.net
+ * 
  */
 public class Common {
 
@@ -64,9 +65,10 @@ public class Common {
 
     /**
      * Get a direct string representation of a List
+     * Taken from http://stackoverflow.com/a/6324852/4341594
+     * 
      * @param list
      * @return String representation
-     * @see Taken from http://stackoverflow.com/a/6324852/4341594
      * @since 0.2.0
      */
     public static String getStringRepresentation(List<Character> list) {
@@ -79,10 +81,10 @@ public class Common {
 
     /**
      * Count occurrences of a char in a string
+     * Taken from http://stackoverflow.com/a/275969/4341594
      * @param haystack String to search
      * @param needle Char to count occurrences of.
      * @return Number of occurrences
-     * @see Taken from http://stackoverflow.com/a/275969/4341594
      * @since 0.2.0
      */
     
