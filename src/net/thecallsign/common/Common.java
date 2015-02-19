@@ -105,6 +105,7 @@ public class Common {
 
     /**
      * Serialize an object into a byte array
+     * http://stackoverflow.com/a/3736247/4341594
      * @param obj Object
      * @return Byte array serialization of Object 
      * @throws IOException
@@ -118,6 +119,7 @@ public class Common {
 
     /**
      * Un-serialize an object into a byte array
+     * http://stackoverflow.com/a/3736247/4341594
      * @param data Object to un-serialize.
      * @return Object
      * @throws IOException
