@@ -15,16 +15,21 @@
  */
 package net.thecallsign.common;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 /**
- * Common methods I use.
- * www.thecallsign.net
+ * Common methods I use. www.thecallsign.net
+ *
  * @author St John 'Cawl' Giddy
  * @version 0.2.1
- * 
+ *
  */
 public class Common {
 
@@ -64,9 +69,9 @@ public class Common {
     }
 
     /**
-     * Get a direct string representation of a List
-     * Taken from http://stackoverflow.com/a/6324852/4341594
-     * 
+     * Get a direct string representation of a List Taken from
+     * http://stackoverflow.com/a/6324852/4341594
+     *
      * @param list
      * @return String representation
      * @since 0.2.0
@@ -80,14 +85,14 @@ public class Common {
     }
 
     /**
-     * Count occurrences of a char in a string
-     * Taken from http://stackoverflow.com/a/275969/4341594
+     * Count occurrences of a char in a string Taken from
+     * http://stackoverflow.com/a/275969/4341594
+     *
      * @param haystack String to search
      * @param needle Char to count occurrences of.
      * @return Number of occurrences
      * @since 0.2.0
      */
-    
     public static int countOccurrences(String haystack, char needle) {
         int count = 0;
         for (int i = 0; i < haystack.length(); i++) {
@@ -96,5 +101,31 @@ public class Common {
             }
         }
         return count;
+    }
+
+    /**
+     * Serialize an object into a byte array
+     * @param obj Object
+     * @return Byte array serialization of Object 
+     * @throws IOException
+     */
+    public static byte[] serialize(Object obj) throws IOException {
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        ObjectOutputStream os = new ObjectOutputStream(out);
+        os.writeObject(obj);
+        return out.toByteArray();
+    }
+
+    /**
+     * Un-serialize an object into a byte array
+     * @param data Object to un-serialize.
+     * @return Object
+     * @throws IOException
+     * @throws ClassNotFoundException
+     */
+    public static Object deserialize(byte[] data) throws IOException, ClassNotFoundException {
+        ByteArrayInputStream in = new ByteArrayInputStream(data);
+        ObjectInputStream is = new ObjectInputStream(in);
+        return is.readObject();
     }
 }
