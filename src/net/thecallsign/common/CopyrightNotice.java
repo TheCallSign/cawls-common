@@ -29,6 +29,8 @@ public class CopyrightNotice extends javax.swing.JFrame {
         this.setTitle("About");
         this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         this.setLocationRelativeTo(null);
+        this.setAlwaysOnTop(true);
+        this.setAutoRequestFocus(true);
     }
 
     /**
