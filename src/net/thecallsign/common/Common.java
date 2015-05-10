@@ -69,7 +69,7 @@ public class Common {
     }
 
     /**
-     * Get a direct string representation of a List Taken from
+     * Get a direct string representation of a List. Taken from
      * http://stackoverflow.com/a/6324852/4341594
      *
      * @param list
@@ -85,7 +85,7 @@ public class Common {
     }
 
     /**
-     * Count occurrences of a char in a string Taken from
+     * Count occurrences of a char in a string. Taken from
      * http://stackoverflow.com/a/275969/4341594
      *
      * @param haystack String to search
